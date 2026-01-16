@@ -1,0 +1,551 @@
+Awesome Drone Security Research 🛡️🛸
+
+A curated, research-focused collection of resources for drone (UAS/UAV) security, firmware analysis, protocol auditing, simulation, and resilience testing.
+
+This repository emphasizes defensive security, owned hardware, and simulation-first research.
+
+
+---
+
+⚠️ Legal & Ethical Notice
+
+This repository is intended only for:
+
+Defensive security research
+
+Firmware and protocol auditing
+
+Simulation (SITL/HITL)
+
+Testing on hardware you own or are authorized to use
+
+
+🚫 This repository does not support:
+
+RF jamming or interference
+
+GPS spoofing against live systems
+
+Unauthorized access or hijacking
+
+Disruption of real-world aircraft
+
+
+Always comply with applicable laws and regulations (FAA, FCC, EASA, CAA, etc.).
+
+
+---
+
+📌 Scope
+
+Open-source autopilots (PX4, ArduPilot)
+
+Telemetry and control links (MAVLink)
+
+Firmware security
+
+Navigation resilience
+
+Simulation-based testing
+
+AI and sensor security
+
+
+
+---
+
+🧠 Threat Model Overview
+
+Common drone security threat categories:
+
+Telemetry interception or tampering
+
+Firmware integrity compromise
+
+Navigation degradation or deception
+
+Supply-chain vulnerabilities
+
+Sensor spoofing or failure
+
+
+This repo focuses on detection, mitigation, and resilience.
+
+
+---
+
+🧩 Firmware & Software Security
+
+General
+
+Firmware extraction and analysis
+
+Secure boot concepts
+
+Signed firmware updates
+
+OTA update safety
+
+Static analysis (Ghidra, Binwalk)
+
+
+
+---
+
+🚁 PX4 Security Research
+
+PX4 Architecture
+
+NuttX RTOS security considerations
+
+PX4 module isolation
+
+Parameter storage integrity
+
+
+PX4 Firmware Security Topics
+
+Secure boot chains
+
+Firmware signing
+
+Update mechanisms
+
+MAVLink signing support
+
+
+PX4 Testing Tools
+
+PX4 SITL
+
+Gazebo + PX4
+
+PX4 CI pipelines
+
+Log analysis (ULog)
+
+
+📌 Focus: prevention, validation, and recovery
+
+
+---
+
+🚁 ArduPilot Security Research
+
+ArduPilot Architecture
+
+HAL abstraction layer
+
+Scheduler and task isolation
+
+EEPROM / parameter storage
+
+
+ArduPilot Firmware Security Topics
+
+Bootloader integrity
+
+Firmware signing (where supported)
+
+Failsafe behavior analysis
+
+Parameter tamper detection
+
+
+ArduPilot Testing Tools
+
+ArduPilot SITL
+
+Mission Planner / MAVProxy
+
+Log analysis
+
+
+📌 Focus: robust failsafes and operational safety
+
+
+---
+
+📡 Telemetry, RF & Protocol Security (Defensive)
+
+MAVLink protocol structure
+
+Message signing and authentication
+
+Encryption research
+
+Replay attack detection
+
+Telemetry anomaly detection
+
+
+⚠️ RF tools should be used in monitor-only or simulation environments.
+
+
+---
+
+🧭 Navigation, GPS & Resilience
+
+GNSS integrity monitoring
+
+GPS spoofing detection (not execution)
+
+Sensor fusion hardening
+
+INS + vision-based navigation
+
+Failsafe navigation modes
+
+
+
+---
+
+🤖 AI, Vision & Sensor Security
+
+Visual navigation fallback systems
+
+Adversarial robustness (research)
+
+Sensor redundancy
+
+Camera and LiDAR integrity
+
+
+
+---
+
+🧪 Simulation & Testing (Preferred)
+
+Software-In-The-Loop (SITL)
+
+PX4 SITL
+
+ArduPilot SITL
+
+
+Simulation Environments
+
+Gazebo
+
+AirSim
+
+ROS 2 integration
+
+
+Hardware-In-The-Loop (HITL)
+
+Pixhawk-based setups
+
+Isolated RF environments
+
+
+
+---
+
+🧪 Drone Security Lab Guide
+
+Recommended Lab Setup
+
+Hardware (optional):
+
+Pixhawk-compatible flight controller
+
+Companion computer (Raspberry Pi / Jetson)
+
+GPS module
+
+IMU / camera
+
+
+Software:
+
+Ubuntu Linux
+
+PX4 or ArduPilot
+
+Gazebo or AirSim
+
+Ghidra / Binwalk
+
+Wireshark (simulation traffic)
+
+
+
+---
+
+Lab Exercises (Safe & Legal)
+
+1. Firmware integrity verification
+
+
+2. Parameter tamper detection
+
+
+3. Telemetry signing validation
+
+
+4. Failsafe trigger testing
+
+
+5. GPS-loss recovery simulation
+
+
+6. Vision-based navigation fallback
+
+
+
+
+---
+
+📚 Standards, Papers & Guidance
+
+FAA UAS cybersecurity guidance
+
+NIST UAV cybersecurity research
+
+Academic papers on UAS security
+
+Open-source research blogs
+
+
+
+---
+
+🤝 Contributing
+
+We welcome contributions that strengthen defensive drone security research.
+
+Contribution Rules
+
+✅ Allowed:
+
+Simulation-based research (SITL / HITL)
+
+Firmware auditing and integrity validation
+
+Protocol analysis and documentation
+
+Detection, mitigation, and resilience techniques
+
+Academic papers and standards references
+
+
+🚫 Not Allowed:
+
+RF jamming or interference tools
+
+Live GPS spoofing or hijacking
+
+Unauthorized access techniques
+
+Instructions enabling real-world disruption
+
+
+How to Contribute
+
+1. Fork the repository
+
+
+2. Create a feature branch
+
+
+3. Add well-documented resources or labs
+
+
+4. Include citations where applicable
+
+
+5. Submit a pull request with a clear description
+
+
+
+
+---
+
+🧪 Hands-On PX4 & ArduPilot Security Labs
+
+These labs are designed to be legal, repeatable, and simulation-first.
+
+Lab 1: Firmware Integrity Verification
+
+Build firmware from source
+
+Verify hashes and signatures
+
+Compare against deployed firmware (SITL)
+
+
+Lab 2: Parameter Tamper Detection
+
+Modify parameters in SITL
+
+Observe system responses
+
+Validate failsafe behavior
+
+
+Lab 3: Telemetry Signing Validation
+
+Enable MAVLink signing
+
+Attempt unsigned message injection (simulation)
+
+Confirm rejection and logging
+
+
+Lab 4: Failsafe Trigger Analysis
+
+Simulate RC loss
+
+Simulate GPS degradation
+
+Observe recovery logic
+
+
+Lab 5: Navigation Resilience
+
+Disable GNSS in SITL
+
+Validate INS / vision fallback
+
+Measure drift and recovery
+
+
+
+---
+
+🧠 Threat Models
+
+High-Level Threat Categories
+
+Command & Control: message tampering, replay
+
+Firmware: unauthorized modification, rollback
+
+Navigation: GNSS degradation or deception
+
+Sensors: spoofing, saturation, failure
+
+Supply Chain: compromised components or updates
+
+
+Defensive Controls Mapping
+
+Threat	Mitigation
+
+Telemetry replay	MAVLink signing
+Firmware tampering	Secure boot + hashes
+GNSS loss	Sensor fusion + failsafes
+Sensor failure	Redundancy + validation
+
+
+
+---
+
+📐 Architecture Diagrams (Recommended)
+
+Include diagrams for:
+
+PX4 boot chain
+
+ArduPilot data flow
+
+MAVLink trust boundaries
+
+Simulation vs real-world isolation
+
+
+Mermaid diagrams are encouraged for portability.
+
+Example Mermaid Diagrams
+
+PX4 Secure Boot Chain
+
+graph TD
+A[Boot ROM] --> B[First-stage Bootloader]
+B -->|Verify Signature| C[PX4 Firmware]
+C --> D[PX4 Modules]
+D --> E[Flight Tasks]
+
+ArduPilot Data Flow & Trust Boundaries
+
+graph LR
+GCS[Ground Control Station] -->|MAVLink| FC[Flight Controller]
+FC --> S[Sensor Fusion]
+S --> N[Navigation]
+N --> A[Actuators]
+subgraph Trusted
+FC
+S
+N
+A
+end
+
+MAVLink Threat Surface (Defensive View)
+
+graph LR
+GCS -->|Signed MAVLink| FC
+Attacker -.->|Unsigned / Replay| FC
+FC -->|Reject & Log| LOGS[Security Logs]
+
+Simulation vs Real-World Isolation
+
+graph TD
+SIM[Simulation Environment] -->|Virtual Links| SITL[SITL Autopilot]
+SITL --> LOGS
+REAL[Real Hardware] -.->|Physically Isolated| SIM
+
+
+---
+
+📜 License
+
+MIT License
+
+
+---
+
+If you find this useful, consider ⭐ starring the repository.
+
+Done ✅
+
+I’ve generated and added the next option: Mermaid threat & architecture diagrams, directly into the README in the canvas.
+
+What this adds to your repo
+
+✔ Renderable Mermaid diagrams (GitHub-native)
+✔ Clear PX4 secure boot chain visualization
+✔ ArduPilot data flow + trust boundaries
+✔ MAVLink threat surface (defensive)
+✔ Simulation vs real-world isolation model
+
+These diagrams:
+
+Make the repo much more professional
+
+Help reviewers immediately understand scope
+
+Are ideal for research papers, classes, and labs
+
+Reinforce your defensive-only stance
+
+
+
+---
+
+What I recommend next (pick one)
+
+1. PX4 vs ArduPilot security comparison table
+
+
+2. Full semester-style drone security lab syllabus
+
+
+3. CI guardrails (PR checks to block illegal content)
+
+
+4. NIST / FAA mapping section (standards alignment)
+
+
+
+Say which one you want next and I’ll generate it cleanly 🔐🛸
