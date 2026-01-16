@@ -1,0 +1,454 @@
+Awesome Drone Security Research 🛡️🛸
+
+A curated, research-focused collection of resources for drone (UAS/UAV) security, firmware analysis, protocol auditing, simulation, and resilience testing.
+
+This repository emphasizes defensive security, owned hardware, and simulation-first research.
+
+
+---
+
+⚠️ Legal & Ethical Notice
+
+This repository is intended only for:
+
+Defensive security research
+
+Firmware and protocol auditing
+
+Simulation (SITL/HITL)
+
+Testing on hardware you own or are authorized to use
+
+
+🚫 This repository does not support:
+
+RF jamming or interference
+
+GPS spoofing against live systems
+
+Unauthorized access or hijacking
+
+Disruption of real-world aircraft
+
+
+Always comply with applicable laws and regulations (FAA, FCC, EASA, CAA, etc.).
+
+
+---
+
+📌 Scope
+
+Open-source autopilots (PX4, ArduPilot)
+
+Telemetry and control links (MAVLink)
+
+Firmware security
+
+Navigation resilience
+
+Simulation-based testing
+
+AI and sensor security
+
+
+
+---
+
+🧠 Threat Model Overview
+
+Common drone security threat categories:
+
+Telemetry interception or tampering
+
+Firmware integrity compromise
+
+Navigation degradation or deception
+
+Supply-chain vulnerabilities
+
+Sensor spoofing or failure
+
+
+This repo focuses on detection, mitigation, and resilience.
+
+
+---
+
+🧩 Firmware & Software Security
+
+General
+
+Firmware extraction and analysis
+
+Secure boot concepts
+
+Signed firmware updates
+
+OTA update safety
+
+Static analysis (Ghidra, Binwalk)
+
+
+
+---
+
+🚁 PX4 Security Research
+
+PX4 Architecture
+
+NuttX RTOS security considerations
+
+PX4 module isolation
+
+Parameter storage integrity
+
+
+PX4 Firmware Security Topics
+
+Secure boot chains
+
+Firmware signing
+
+Update mechanisms
+
+MAVLink signing support
+
+
+PX4 Testing Tools
+
+PX4 SITL
+
+Gazebo + PX4
+
+PX4 CI pipelines
+
+Log analysis (ULog)
+
+
+📌 Focus: prevention, validation, and recovery
+
+
+---
+
+🚁 ArduPilot Security Research
+
+ArduPilot Architecture
+
+HAL abstraction layer
+
+Scheduler and task isolation
+
+EEPROM / parameter storage
+
+
+ArduPilot Firmware Security Topics
+
+Bootloader integrity
+
+Firmware signing (where supported)
+
+Failsafe behavior analysis
+
+Parameter tamper detection
+
+
+ArduPilot Testing Tools
+
+ArduPilot SITL
+
+Mission Planner / MAVProxy
+
+Log analysis
+
+
+📌 Focus: robust failsafes and operational safety
+
+
+---
+
+📡 Telemetry, RF & Protocol Security (Defensive)
+
+MAVLink protocol structure
+
+Message signing and authentication
+
+Encryption research
+
+Replay attack detection
+
+Telemetry anomaly detection
+
+
+⚠️ RF tools should be used in monitor-only or simulation environments.
+
+
+---
+
+🧭 Navigation, GPS & Resilience
+
+GNSS integrity monitoring
+
+GPS spoofing detection (not execution)
+
+Sensor fusion hardening
+
+INS + vision-based navigation
+
+Failsafe navigation modes
+
+
+
+---
+
+🤖 AI, Vision & Sensor Security
+
+Visual navigation fallback systems
+
+Adversarial robustness (research)
+
+Sensor redundancy
+
+Camera and LiDAR integrity
+
+
+
+---
+
+🧪 Simulation & Testing (Preferred)
+
+Software-In-The-Loop (SITL)
+
+PX4 SITL
+
+ArduPilot SITL
+
+
+Simulation Environments
+
+Gazebo
+
+AirSim
+
+ROS 2 integration
+
+
+Hardware-In-The-Loop (HITL)
+
+Pixhawk-based setups
+
+Isolated RF environments
+
+
+
+---
+
+🧪 Drone Security Lab Guide
+
+Recommended Lab Setup
+
+Hardware (optional):
+
+Pixhawk-compatible flight controller
+
+Companion computer (Raspberry Pi / Jetson)
+
+GPS module
+
+IMU / camera
+
+
+Software:
+
+Ubuntu Linux
+
+PX4 or ArduPilot
+
+Gazebo or AirSim
+
+Ghidra / Binwalk
+
+Wireshark (simulation traffic)
+
+
+
+---
+
+Lab Exercises (Safe & Legal)
+
+1. Firmware integrity verification
+
+
+2. Parameter tamper detection
+
+
+3. Telemetry signing validation
+
+
+4. Failsafe trigger testing
+
+
+5. GPS-loss recovery simulation
+
+
+6. Vision-based navigation fallback
+
+
+
+
+---
+
+📚 Standards, Papers & Guidance
+
+FAA UAS cybersecurity guidance
+
+NIST UAV cybersecurity research
+
+Academic papers on UAS security
+
+Open-source research blogs
+
+
+
+---
+
+🤝 Contributing
+
+Contributions are welcome if they:
+
+Are legal and ethical
+
+Focus on defense or research
+
+Prefer simulation-based testing
+
+Include documentation and citations
+
+
+🚫 Contributions involving jamming, hijacking, or live interference will not be accepted.
+
+
+---
+
+📜 License
+
+MIT License
+
+
+---
+
+⭐ Acknowledgments
+
+Inspired by the open-source drone and security research communities.
+
+If you find this useful, consider ⭐ starring the repository.
+
+Done ✅
+
+I’ve created a ready-to-paste, professional README.md in the canvas that does all of the following:
+
+✔️ Cleans and reframes an Awesome Drone Hacking fork into a credible security research repo
+
+✔️ Adds dedicated PX4 and ArduPilot security sections
+
+✔️ Includes a clear legal & ethical disclaimer
+
+✔️ Builds a Drone Security Lab Guide (simulation-first, safe, and legal)
+
+✔️ Uses language appropriate for researchers, universities, and engineers
+
+
+
+---
+
+What you should do next (step-by-step)
+
+1️⃣ Rename your fork
+
+On GitHub:
+
+Go to Settings → Repository name
+
+Rename it to: awesome-drone-security-research ✅
+
+
+
+---
+
+2️⃣ Replace your README.md
+
+Open README.md in your fork
+
+Delete everything
+
+Paste exactly what you see in the canvas
+
+Commit to main
+
+
+
+---
+
+3️⃣ Optional (recommended) next upgrades
+
+If you want to level this up further, the natural next steps are:
+
+Add docs/firmware-analysis.md
+
+Add docs/simulation-labs.md
+
+Add CONTRIBUTING.md with legality rules
+
+Add GitHub Topics:
+
+drone-security
+
+uav
+
+px4
+
+ardupilot
+
+cybersecurity
+
+simulation
+
+
+
+
+---
+
+4️⃣ Why this repo will age well
+
+This structure:
+
+Won’t get flagged or taken down
+
+Won’t attract illegal contributions
+
+Is safe to share publicly
+
+Can evolve into:
+
+Academic research hub
+
+Blue-team drone security lab
+
+AI + autonomy resilience project
+
+
+
+
+---
+
+If you want, next I can:
+
+Generate CONTRIBUTING.md
+
+Build hands-on PX4 / ArduPilot lab exercises
+
+Add threat models with diagrams
+
+Help you align this with NIST / FAA language
+
+
+Just tell me the next step 🛸🛡️
